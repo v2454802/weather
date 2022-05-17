@@ -10,6 +10,7 @@
 body {
   position: relative;
   font-family: 'Caveat', cursive;
+  background: var(#{--body-background-default});
 }
 
 .container {
