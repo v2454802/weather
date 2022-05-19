@@ -1,8 +1,8 @@
 import React from 'react';
 import Select from 'react-select';
 import GlobalSvgSelector from '../../assets/icons/global/GlobalSvgSelector';
-import { Theme } from '../../context/ThemeContext';
-import useTheme from '../../hooks/useTheme';
+import { Theme } from '../../changeTheme/context/ThemeContext';
+import useTheme from '../../changeTheme/hooks/useTheme';
 import style from './Header.module.scss';
 
 function Header() {

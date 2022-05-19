@@ -62,7 +62,7 @@ function GlobalSvgSelector({
           />
         </svg>
       );
-    case 'rain':
+    case 'Rain': // rain
       return (
         <svg
           width="48"
@@ -122,7 +122,7 @@ function GlobalSvgSelector({
           </defs>
         </svg>
       );
-    case 'smallRain':
+    case 'Drizzle': // smallRain
       return (
         <svg
           width="48"
@@ -182,7 +182,7 @@ function GlobalSvgSelector({
           </defs>
         </svg>
       );
-    case 'smallRainSun':
+    case 'smallRainSun': // smallRainSun
       return (
         <svg
           width="48"
@@ -265,7 +265,7 @@ function GlobalSvgSelector({
           </defs>
         </svg>
       );
-    case 'sun':
+    case 'Clear': // sun
       return (
         <svg
           width="48"
@@ -300,7 +300,7 @@ function GlobalSvgSelector({
           </defs>
         </svg>
       );
-    case 'mainlyCloudy':
+    case 'Clouds': // mainlyCloudy
       return (
         <svg
           width="48"

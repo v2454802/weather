@@ -3,27 +3,27 @@ import style from './ThisDayInfo.module.scss';
 import cloud from '../../../../assets/images/cloud.png';
 import ThisDayItem from './ThisDayItem';
 
-function ThisDayInfo() {
+function ThisDayInfo({ weather }) {
   const items = [
     {
       iconId: 'temp',
       name: 'Температура',
-      value: '20° - ощущается как 17°',
+      value: `${Math.round(weather.current.temp)}° - ощущается как ${Math.round(weather.current.feels_like)}°`,
     },
     {
-      iconId: 'pressure',
-      name: 'Давление',
-      value: '765 мм - нормальное',
+      iconId: 'humidity',
+      name: 'Влажность',
+      value: `${weather.current.humidity}%`,
     },
     {
       iconId: 'precipitation',
       name: 'Осадки',
-      value: 'Без осадков',
+      value: `${weather.current.weather[0].description}`,
     },
     {
       iconId: 'wind',
       name: 'Ветер',
-      value: '3 м/с - легкий',
+      value: `${Math.round(weather.current.wind_speed)} м/с`,
     },
   ];
 

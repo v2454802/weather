@@ -104,7 +104,7 @@ export default function IndicatorSvgSelector({
 
         </svg>
       );
-    case 'pressure':
+    case 'humidity':
       return (
         <svg
           width="19"

@@ -21,5 +21,7 @@ module.exports = {
   rules: {
     'react/prop-types': 0,
     'react/jsx-props-no-spreading': 0,
+    'no-param-reassign': 0,
+    'array-callback-return': 0,
   },
 };
