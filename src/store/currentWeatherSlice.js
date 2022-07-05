@@ -1,4 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {
+  createSlice
+} from '@reduxjs/toolkit';
 
 const initialState = {
   weather: {
@@ -8,19 +10,14 @@ const initialState = {
       humidity: 0,
       feels_like: 0,
       wind_speed: 0,
-      weather: [
-        {
-          main: '',
-          description: '',
-        },
-      ],
+      weather: [{
+        main: '',
+        description: '',
+      }, ],
     },
     daily: [{
       temp: {},
-      weather: [
-        {
-        },
-      ],
+      weather: [{}, ],
     }],
   },
   isLoading: false,
