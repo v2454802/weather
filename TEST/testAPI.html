@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GeoTree example 1</title>
+  <!-- Подключаем библиотеки jQuery и jQuery UI -->
+  <script src="https://files.geotree.ru/jquery/jquery-1.12.4.js"></script>
+  <script src="https://files.geotree.ru/jquery/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://files.geotree.ru/jquery/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    .ui-autocomplete-loading {
+      background: white url("https://files.geotree.ru/jquery/ui/images/ui-anim_basic_16x16.gif") right center no-repeat;
+    }
+  </style>
+  <script>
+  $(function() {
+    //Добавляем автодополнение к текстовому полю с идентификатором "geotree_example_1"
+    $("#geotree_example_1").autocomplete({
+      //При поиске к указанному адресу будет добавляться "&term=введенный текст..."
+      source: "https://api.geotree.ru/search.php?",
+      minLength: 0, //Минимальное количество символов, которое пользователь должен ввести перед выполнением поиска
+      delay: 0, //Задержка в миллисекундах между нажатием клавиши и выполнением поиска
+      select: function( event, ui ) {//Событие срабатывает при выборе элемента в меню
+	    //Выбранный элемент выведем в консоль и в блок #result_1
+        console.log(ui.item);
+        $("#result_1").html(JSON.stringify(ui.item));
+      }
+	})
+    .on("focus", function() { //при получении фокуса будет выполняться поиск, даже если поле пустое
+		$(this).autocomplete( 'search', $(this).val());
+	});
+  });
+  </script>
+</head>
+<body>
+  <!-- Блок с полем для ввода -->
+  <div class="ui-widget">
+	<input id="geotree_example_1" style="width: 100%;" placeholder="Начните ввод текста">
+  </div>
+  <!-- Блок для отображения информации по выбранному элементу -->
+  <div id="result_1" style="background-color: #e0e0e0; word-wrap: break-word; margin: 5px; padding: 5px;"></div>
+</body>
+</html>
