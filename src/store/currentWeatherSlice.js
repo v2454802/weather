@@ -1,5 +1,5 @@
 import {
-  createSlice,
+  createSlice
 } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -13,11 +13,11 @@ const initialState = {
       weather: [{
         main: '',
         description: '',
-      }],
+      }, ],
     },
     daily: [{
       temp: {},
-      weather: [{}],
+      weather: [{}, ],
     }],
   },
   isLoading: false,
