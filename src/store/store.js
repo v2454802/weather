@@ -1,6 +1,6 @@
 import {
   configureStore,
-  combineReducers
+  combineReducers,
 } from '@reduxjs/toolkit';
 import currentWeatherSliceReducer from './currentWeatherSlice';
 
